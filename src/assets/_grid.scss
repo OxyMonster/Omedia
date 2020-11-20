@@ -1,0 +1,14 @@
+.row {
+  display : flex;
+  flex-direction: row;
+  justify-content : space-between; 
+  flex-flow : wrap;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}

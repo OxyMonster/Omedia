@@ -1,0 +1,8 @@
+<div class="landing">
+    <div class="landing__search">
+        <app-search (result) = 'getSearchResult($event)' style="width: 45%;"></app-search>
+    </div>
+    <div class="landing__content">
+        <router-outlet></router-outlet>
+    </div> 
+</div>

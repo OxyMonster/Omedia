@@ -1,0 +1,18 @@
+@import 'src/assets/variables';
+.title {
+    h4 {
+        font-size: 30px;
+        font-family: "White On Black", sans-serif;
+        color: $cyan;
+    }
+}
+
+.repos {
+    &__box {
+        p {
+            font-size: 44px;
+            font-family: 'White On Black', sans-serif;
+            border-bottom: 2px solid $black;
+        }
+    }
+}

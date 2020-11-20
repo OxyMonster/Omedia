@@ -1,0 +1,17 @@
+<ng-container *ngIf="allUserRepos$ | async as repos; else showLoading">
+    <div class="title">
+        <h4>Repositories</h4>
+    </div>
+    <div class="repos" *ngFor="let item of repos; index as i">
+        <div class="repos__box" *ngIf="i < 3" class="box">
+            <p style="font-size: 30px;  border-bottom: 2px solid black;"> {{ item.name  }} </p>
+        </div>
+        
+    </div>
+</ng-container>
+
+<ng-template #showLoading>
+    <div class="loading">
+        <img src="assets/img/loading.svg" alt="">
+    </div>
+</ng-template>

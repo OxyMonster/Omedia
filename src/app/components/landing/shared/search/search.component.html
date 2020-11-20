@@ -1,0 +1,28 @@
+<div class="search">
+    <div class="search__input">
+        <input type="text" 
+               [(ngModel)]="searchKey" 
+               placeholder=""
+               (keyup.enter) = 'onSubmit()'
+               autofocus 
+               >
+    </div>
+
+    <div class="search__button">
+        <button class="btn--primary" (click)="onSubmit()">Search</button>
+    </div>
+    
+    <div class="search__last" >
+        <ng-container *ngIf="lastSearches.length > 0">
+            <div class="search__last__title">
+                <h4>Last searches</h4>
+            </div>
+    
+            <div class="search__last__keys">
+                <div *ngFor="let item of lastSearches" class="">
+                        <p (click) = 'routeToDetails(item)'> {{ item }} </p>
+                </div>
+            </div>
+        </ng-container>
+        
+    </div>

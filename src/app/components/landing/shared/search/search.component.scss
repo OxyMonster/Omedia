@@ -1,0 +1,61 @@
+@import 'src/assets/variables'; 
+
+.search {
+
+    &__input {
+        input {
+            height: 60px;
+            width: 100%;
+            border-radius: 15px;
+            padding-left: 25px;
+            outline: none;
+            font-size: 28px;
+            font-family: 'White On Black', sans-serif;
+        }
+    };
+
+    &__button {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+
+        button {
+           @include btn--primary;
+        }
+    };
+
+    &__last {
+        margin-top: 40px;
+        height: 50px;
+     
+       
+        &__title {
+           h4 {
+               font-size: 48px;
+               color: $light-grey;
+               margin: 0;
+           }
+       };
+
+        &__keys {
+            display: flex;
+            @media (max-width: 790px) {
+                display: block;
+                width: 100%;
+            }
+            p {
+                cursor: pointer;
+                padding-right: 45px;
+                color: $cyan;
+                font-size: 30px;
+          
+                &:hover {
+                    // text-decoration: underline;
+                    color: $light-grey;
+                    transition: .4s;
+                }
+
+            }
+        }
+    }
+}

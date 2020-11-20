@@ -1,0 +1,13 @@
+@import 'src/assets/variables';
+
+.container {
+
+    &__back {
+        button {
+            @include btn--primary
+        }
+        margin-bottom: 50px;
+    };
+
+
+}

@@ -1,0 +1,17 @@
+@import 'src/assets/variables';
+@import 'src/assets/grid'; 
+
+.landing {
+    &__search {
+        height: 420px;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    };
+
+    &__content {
+        padding: 40px;  
+    }
+}

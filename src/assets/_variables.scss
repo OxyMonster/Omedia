@@ -1,0 +1,37 @@
+// * * * Colors * * *
+$black: #222831;
+$cyan: #00ADB5;
+$light-grey: #EEEEEE;
+$dark-grey: #393e46;
+
+
+//  * * * Mixins * * * 
+@mixin  btn--primary {
+    background-color: $cyan;
+    color: $light-grey;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 35px 10px 35px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Bekelakar', sans-serif;
+    font-size: 45px;
+    &:hover {
+        background-color: #00acb5d3;
+        cursor: pointer;
+        transition: .4s;
+    }
+};
+
+.loading {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 150px;
+        height: 100px;
+    }
+}
