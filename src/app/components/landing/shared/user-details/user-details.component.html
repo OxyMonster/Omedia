@@ -7,13 +7,7 @@
         </div>
         <div class="box__name">
             <p> {{ item.type  }} </p>
-            <p *ngIf="isFilteredUsers"
-               style="color:#393e46; font-size: 25px; cursor: pointer;"
-               (click)="linkToGitHub(item.html_url)"
-                > {{ item.name }} </p>
-            <p *ngIf="!isFilteredUsers"
-                style="color:#393e46; font-size: 25px;"
-                > {{ item.name }} </p>
+            <p style="color:#393e46; font-size: 25px;"> {{ item.name }} </p>
         </div>
         <div class="box__repos">
             <app-user-repos [repoUrl] = 'item.repos_url'></app-user-repos>

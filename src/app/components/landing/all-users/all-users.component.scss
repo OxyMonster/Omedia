@@ -35,5 +35,9 @@
 .box-list {
     width: 100%;
     transition: .4s;
+    @media (max-width: 990px) {
+        display: block;
+        width: 100%;
+    }
 
 }

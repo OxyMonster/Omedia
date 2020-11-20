@@ -1,8 +1,9 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { GitUser } from 'src/app/interfaces/GitUser'
+import { Observable, of  } from 'rxjs';
 import { GithubUsersService } from 'src/app/services/github-users.service';
+import { catchError } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-filtered-user',
@@ -13,8 +14,9 @@ export class FilteredUserComponent implements OnInit {
 
 
   routeID: string; 
-  filteredUser$: Observable<GitUser>
-
+  filteredUser$: Observable<any>;
+  loadingError$ = new Subject<boolean>();
+  
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
@@ -38,13 +40,28 @@ export class FilteredUserComponent implements OnInit {
               } );
   };
 
-  getGitUser(): Observable<GitUser> {
-    return this.filteredUser$ = this._gitUserService.getGitUser(this.routeID);
+  getGitUser():Observable<any> {
+        
+    return this.filteredUser$ = this._gitUserService
+                                    .getGitUser(this.routeID)
+                                    .pipe(
+                                      catchError((error) => {
+                                        console.error('error loading the list of users', error);
+                                        this.loadingError$.next(true);
+                                        
+                                        return of();
+                                      })
+                                    );
   };
 
-  routeToLanding() {
+  routeToLanding(): void {
     this._router.navigate(['/']);
   };
 
+  
+  linkToGitHub(url): void {
+    window.open(url)
+     
+  };
 
 }

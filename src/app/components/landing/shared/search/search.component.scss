@@ -39,10 +39,7 @@
 
         &__keys {
             display: flex;
-            @media (max-width: 790px) {
-                display: block;
-                width: 100%;
-            }
+           
             p {
                 cursor: pointer;
                 padding-right: 45px;

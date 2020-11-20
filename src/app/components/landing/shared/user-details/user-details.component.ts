@@ -28,9 +28,5 @@ export class UserDetailsComponent implements OnInit {
     this.allUsersData$ = this._gitUserService.getAllUserDetails(this.userUrl);      
   };
 
-  linkToGitHub(url) {
-   window.open(url)
-    
-  }
 
 }

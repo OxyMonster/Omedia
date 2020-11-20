@@ -35,4 +35,9 @@ export class GithubUsersService {
     return this._http.get(repoUrl)
   }; 
 
+  getUserOrganizations(orgUrl: string): Observable<any> {
+
+    return this._http.get(orgUrl); 
+  };
+
 }

@@ -1,7 +1,7 @@
 @import 'src/assets/variables';
 
 .box {
-    align-items: center;
+    align-items: flex-start;
     transition: transform 1s;
     margin-bottom: 60px;
     background: #393e4614;
@@ -14,10 +14,6 @@
     @media (max-width: 790px) {
         display: block;
     }
-    //   display: grid;
-    //     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    //     grid-gap: 1rem;
-    //     width: 100%;
 
     &:hover {
         transform: translateY(-10px);

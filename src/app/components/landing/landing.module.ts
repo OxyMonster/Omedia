@@ -10,6 +10,8 @@ import { FilteredUserComponent } from './filtered-user/filtered-user.component';
 import { UserDetailsComponent } from './shared/user-details/user-details.component';
 import { UserReposComponent } from './shared/user-details/user-repos/user-repos.component';
 import { SearchComponent } from './shared/search/search.component';
+import { UserOrganizationsComponent } from './filtered-user/user-organizations/user-organizations.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import { SearchComponent } from './shared/search/search.component';
     AllUsersComponent,
     PageNotFoundComponent,
     UserDetailsComponent,
-    FilteredUserComponent,
-    UserReposComponent
+    FilteredUserComponent, 
+    UserReposComponent,
+    UserOrganizationsComponent 
   ],
   imports: [
     CommonModule,

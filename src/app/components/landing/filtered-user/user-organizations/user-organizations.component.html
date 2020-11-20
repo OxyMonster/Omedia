@@ -1,0 +1,14 @@
+<div class="organizations">
+    <div class="organizations__title">
+        <p>Ogranizations</p>
+    </div>
+</div>
+<ng-container *ngFor="let item of allOrganizations$ | async">
+    <p style="font-size: 30px; border-bottom: 2px solid black;"> {{ item.login }} </p>
+</ng-container>
+
+<ng-template #showLoading>
+    <div class="loading">
+        <img src="assets/img/loading.svg" alt="">
+    </div>
+</ng-template>
