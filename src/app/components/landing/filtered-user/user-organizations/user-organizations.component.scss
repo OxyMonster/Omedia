@@ -5,5 +5,17 @@
         font-family: "White On Black", sans-serif;
         color: #00ADB5;
 
+    };
+
+    &__avatar {
+        &__container {
+            width: 150px;
+            height: 150px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }

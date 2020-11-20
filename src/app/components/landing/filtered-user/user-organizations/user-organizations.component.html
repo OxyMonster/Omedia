@@ -4,6 +4,11 @@
     </div>
 </div>
 <ng-container *ngFor="let item of allOrganizations$ | async">
+    <div class="organizations__avatar">
+        <div class="organizations__avatar__container">
+            <img [src]="item.avatar_url" alt="">
+        </div>
+    </div>
     <p style="font-size: 30px; border-bottom: 2px solid black; cursor: pointer;"
        (click) = 'linkToOrnganization(item.login)'> {{ item.login }} </p>
 </ng-container>
