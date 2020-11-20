@@ -29,4 +29,8 @@ export class UserOrganizationsComponent implements OnInit {
     return this.allOrganizations$ = this._gitUserService.getUserOrganizations(this.organizationsUrl);
    };
 
+   linkToOrnganization(orgUrl) {
+     window.open(`https://github.com/${orgUrl}`)
+   }
+
 }
